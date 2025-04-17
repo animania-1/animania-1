@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar Cita - Veterinaria Online</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">VeterinariaOnline</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="agendar_cita.html">Agendar Cita</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="py-5 agendar-cita">    <div class="container">
+        <h1 class="text-center mb-5">Agenda tu Consulta</h1>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <form class="needs-validation" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="nombre" class="form-label">Nombre completo</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                                    <div class="invalid-feedback">
+                                        Por favor ingresa tu nombre completo
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                    <div class="invalid-feedback">
+                                        Por favor ingresa un correo válido
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="telefono" name="telefono" required>
+                                <div class="invalid-feedback">
+                                    Por favor ingresa tu teléfono
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="servicio" class="form-label">Tipo de consulta</label>
+                                <select class="form-select" id="servicio" name="servicio" required>
+                                    <option value="" selected disabled>Selecciona un servicio</option>
+                                    <option value="1">Consulta General (30 min - 35€)</option>
+                                    <option value="2">Nutrición Animal (45 min - 50€)</option>
+                                    <option value="3">Primeros Auxilios (60 min - 60€)</option>
+                                    <option value="4">Consulta Urgente (20 min - 45€)</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Por favor selecciona un servicio
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="fecha" class="form-label">Fecha</label>
+                                    <input type="date" class="form-control" id="fecha" name="fecha" required>
+                                    <div class="invalid-feedback">
+                                        Por favor selecciona una fecha válida
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="hora" class="form-label">Hora</label>
+                                    <select class="form-select" id="hora" name="hora" required>
+                                        <option value="" selected disabled>Selecciona una hora</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="18:00">18:00</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Por favor selecciona una hora
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">Información adicional sobre tu mascota</label>
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
+                            </div>
+                            
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="privacidad" required>
+                                <label class="form-check-label" for="privacidad">Acepto la <a href="politica_privacidad.html">política de privacidad</a> y los <a href="terminos_servicio.html">términos de servicio</a>.</label>
+                                <div class="invalid-feedback">
+                                    Debes aceptar los términos para continuar
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-success btn-lg btn-submit">Agendar cita</button>                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="card mt-4 bg-light info-card">
+
+                    <div class="card-body">
+                        <h3 class="card-title">Información importante</h3>
+                        <ul>
+                            <li>Las consultas se realizan por videollamada a través de Zoom o Google Meet.</li>
+                            <li>Recibirás un correo de confirmación con los detalles de tu cita.</li>
+                            <li>El pago se realizará después de la confirmación de la reserva.</li>
+                            <li>Si necesitas cancelar, hazlo con al menos 24 horas de antelación.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <div class="social-links mb-3">
+        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <p class="mb-0">© 2024 VeterinariaOnline. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script></body>
+</html>
