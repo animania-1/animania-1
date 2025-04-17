@@ -1,3 +1,21 @@
+// Inicializa EmailJS (usa tu ID público)
+emailjs.init("J4sC6bTK94RIIrZrl");
+
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  
+  emailjs.sendForm("service_4yav7km", "template_ri2e9uc", this)
+    .then(() => {
+      alert("✅ Cita confirmada. Revisa tu correo.");
+      window.location.href = "index.html"; // Redirige al inicio
+    })
+    .catch(() => {
+      alert("❌ Error al enviar. Por favor, inténtalo más tarde.");
+    });
+});
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // Validación de formularios
     const forms = document.querySelectorAll('.needs-validation');
